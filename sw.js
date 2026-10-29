@@ -1,5 +1,5 @@
-const CACHE='jingjishi-base-2026-v4';
-const ASSETS=['./','./index.html','./style.css','./app.js','./sync-config.js','./sync.bundle.js','./db.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+const CACHE='jingjishi-base-2026-v5';
+const ASSETS=['./','./index.html','./style.css','./app.js','./db.json','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{
