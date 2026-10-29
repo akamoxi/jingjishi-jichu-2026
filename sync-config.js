@@ -2,5 +2,5 @@
 window.JJ_SYNC_CONFIG = {
   url: 'https://olihdquipaihxrdsgilh.supabase.co',
   publishableKey: 'sb_publishable_8W7HSCTDyFH7dlTMFzky0Q_FXu4wW4I',
-  githubEnabled: true,
+  githubEnabled: false,
 };
